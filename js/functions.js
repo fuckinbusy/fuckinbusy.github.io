@@ -4,10 +4,16 @@ var p_is_premium = document.getElementById("is_premium");
 var insert_data_button = document.getElementById("insert_data_button");
 var exit_button = document.getElementById("exit_button");
 var img_photo = document.getElementById("photo");
-var is_filled = false;
 var error = document.getElementById("error");
+var is_filled = false;
 
+tg.expand();
 tg.ready();
+var user = tg.initDataUnsafe.user;
+if (!user) {
+    print_error();
+    tg.close();
+}
 tg.showAlert('Добро пожаловать, ' + tg.initDataUnsafe.user.username);
 
 function print_error() {
@@ -15,18 +21,7 @@ function print_error() {
 }
 
 insert_data_button.addEventListener("click", () => {
-    let user;
-    try {
-        user = tg.initDataUnsafe.user;
-        if (!user)
-        {
-            print_error();
-        }
-    } catch {
-        print_error();
-    }
-
-    if (is_filled != true) {
+    if (!is_filled) {
         let username = user.username;
         let photo_url = user.photo_url;
         let is_premium = "No";
@@ -39,7 +34,6 @@ insert_data_button.addEventListener("click", () => {
         img_photo.src = photo_url;
         p_username.textContent += username;
         p_is_premium.textContent += is_premium;
-        error.textContent = photo_url;
         is_filled = true;
     }
 });
