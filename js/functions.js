@@ -13,6 +13,8 @@ function print_error() {
     error.textContent = "Error";
 }
 
+tg.showAlert('Добро пожаловать, @${tg.WebAppUser.username}.');
+
 insert_data_button.addEventListener("click", () => {
     let user;
     try {
