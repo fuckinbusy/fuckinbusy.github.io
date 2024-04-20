@@ -1,5 +1,5 @@
 var tg = window.Telegram.WebApp;
-tg.showAlert('Добро пожаловать, ' + tg.initDataUnsafe.username);
+tg.showAlert('Добро пожаловать, ' + tg.initDataUnsafe.user.username);
 var p_username = document.getElementById("username");
 var p_is_premium = document.getElementById("is_premium");
 
