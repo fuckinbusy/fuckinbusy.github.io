@@ -4,6 +4,7 @@ var p_is_premium = document.getElementById("is_premium");
 
 var insert_data_button = document.getElementById("insert_data_button");
 var exit_button = document.getElementById("exit_button");
+var img_photo = document.getElementById("photo");
 
 var is_filled = false;
 
@@ -12,13 +13,22 @@ function on_click() {
     if (!is_filled) {
         let _user = tg.initDataUnsafe.user;
         let username = _user.username;
-        let is_premium = _user.is_premium;
+        let photo_url = _user.photo_url;
+        let is_premium = "No";
 
-        p_username += username;
+        if (_user.is_premium)
+        {
+            is_premium = "Yes";
+        }
+
+        img_photo.src = photo_url;
+        p_username.textContent += username;
         p_is_premium.textContent += is_premium;
         is_filled = true;
     }
 }
 
 insert_data_button.addEventListener("click", on_click);
+tListener("click", on_click);
+tListener("click", on_click);
 exit_button.addEventListener("click", tg.close);
