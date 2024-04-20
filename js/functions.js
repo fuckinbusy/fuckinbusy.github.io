@@ -11,8 +11,8 @@ var is_filled = false;
 
 insert_data_button.addEventListener("click", () => {
     if (is_filled != true) {
-        let username = tg.initDataUnsafe.user.username;
-        let photo_url = tg.initDataUnsafe.user.photo_url;
+        let username = tg.initDataUnsafe.user.username + "";
+        let photo_url = tg.initDataUnsafe.user.photo_url + "";
         let is_premium = "No";
 
         if (tg.initDataUnsafe.user.is_premium == true)
