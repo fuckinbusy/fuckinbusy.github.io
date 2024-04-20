@@ -1,4 +1,5 @@
 var tg = window.Telegram.WebApp;
+tg.showAlert('Добро пожаловать, ' + tg.initDataUnsafe.username);
 var p_username = document.getElementById("username");
 var p_is_premium = document.getElementById("is_premium");
 
@@ -13,7 +14,7 @@ function print_error() {
     error.textContent = "Error";
 }
 
-tg.showAlert('Добро пожаловать, ' + tg.WebAppUser.username);
+
 
 insert_data_button.addEventListener("click", () => {
     let user;
