@@ -8,7 +8,7 @@ var is_filled = false;
 var error = document.getElementById("error");
 
 tg.ready();
-tg.showAlert('Добро пожаловать!');
+tg.showAlert('Добро пожаловать, ' + tg.initDataUnsafe.user.username);
 
 function print_error() {
     error.textContent = "Error";
@@ -39,6 +39,7 @@ insert_data_button.addEventListener("click", () => {
         img_photo.src = photo_url;
         p_username.textContent += username;
         p_is_premium.textContent += is_premium;
+        error.textContent = photo_url;
         is_filled = true;
     }
 });
