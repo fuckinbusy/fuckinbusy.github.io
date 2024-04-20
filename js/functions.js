@@ -1,20 +1,18 @@
 var tg = window.Telegram.WebApp;
-tg.showAlert('Добро пожаловать, ' + tg.initDataUnsafe.user.username);
 var p_username = document.getElementById("username");
 var p_is_premium = document.getElementById("is_premium");
-
 var insert_data_button = document.getElementById("insert_data_button");
 var exit_button = document.getElementById("exit_button");
 var img_photo = document.getElementById("photo");
-
 var is_filled = false;
 var error = document.getElementById("error");
+
+tg.ready();
+tg.showAlert('Добро пожаловать, ' + tg.initDataUnsafe.user.username);
 
 function print_error() {
     error.textContent = "Error";
 }
-
-
 
 insert_data_button.addEventListener("click", () => {
     let user;
