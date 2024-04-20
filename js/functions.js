@@ -7,15 +7,30 @@ var exit_button = document.getElementById("exit_button");
 var img_photo = document.getElementById("photo");
 
 var is_filled = false;
+var error = document.getElementById("error");
 
+function print_error() {
+    error.textContent = "Error";
+}
 
 insert_data_button.addEventListener("click", () => {
+    let user;
+    try {
+        user = tg.initDataUnsafe.user;
+        if (!user)
+        {
+            print_error();
+        }
+    } catch {
+        print_error();
+    }
+
     if (is_filled != true) {
-        let username = tg.initDataUnsafe.user.username + "";
-        let photo_url = tg.initDataUnsafe.user.photo_url + "";
+        let username = user.username + "";
+        let photo_url = user.photo_url + "";
         let is_premium = "No";
 
-        if (tg.initDataUnsafe.user.is_premium == true)
+        if (user.is_premium == true)
         {
             is_premium = "Yes";
         }
