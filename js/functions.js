@@ -8,7 +8,7 @@ var is_filled = false;
 var error = document.getElementById("error");
 
 tg.ready();
-tg.showAlert('Добро пожаловать, ' + tg.initDataUnsafe.user.username);
+tg.showAlert('Добро пожаловать!');
 
 function print_error() {
     error.textContent = "Error";
