@@ -28,7 +28,9 @@ function on_click() {
     }
 }
 
-insert_data_button.addEventListener("click", on_click);
-tListener("click", on_click);
-tListener("click", on_click);
-exit_button.addEventListener("click", tg.close);
+insert_data_button.addEventListener("click", () => {
+    onclick();
+});
+exit_button.addEventListener("click", () => {
+    tg.close();
+});
