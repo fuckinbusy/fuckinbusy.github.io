@@ -9,7 +9,7 @@ var img_photo = document.getElementById("photo");
 var is_filled = false;
 
 
-function on_click() {
+insert_data_button.addEventListener("click", () => {
     if (!is_filled) {
         let _user = tg.initDataUnsafe.user;
         let username = _user.username;
@@ -26,11 +26,8 @@ function on_click() {
         p_is_premium.textContent += is_premium;
         is_filled = true;
     }
-}
-
-insert_data_button.addEventListener("click", () => {
-    onclick();
 });
+
 exit_button.addEventListener("click", () => {
     tg.close();
 });
