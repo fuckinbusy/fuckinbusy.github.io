@@ -21,11 +21,6 @@ function clear_error() {
 }
 
 tg.ready();
-var user = tg.initDataUnsafe.user; // Telegram WebAppUser
-if (!user) {
-    print_error();
-    tg.close();
-}
 tg.showAlert('Добро пожаловать, ' + tg.initDataUnsafe.user.first_name);
 
 send_data_button.addEventListener("click", () => {
