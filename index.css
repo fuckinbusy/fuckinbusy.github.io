@@ -1,0 +1,134 @@
+/* Intro styles */
+.intro {
+    background-color: rgb(173, 82, 7);
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/first-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.intro h1 {
+    color: white;
+    font-weight: 400;
+    font-size: 50px;
+}
+.intro p {
+    margin-top: 20px;
+    color: white;
+    font-weight: 100;
+    font-size: 24px;
+}
+.intro h1, p {
+    text-align: center;
+    word-wrap: break-word;
+}
+.intro button {
+    width: 120px;
+    height: 40px;
+    background-color: rgb(244,128,34);
+    border: 0;
+    border-radius: 3px;
+    color: white;
+    margin-top: 40px;
+    transition: background-color 0.3s;
+}
+.intro button:hover {
+    background-color: rgb(173, 82, 7);
+}
+
+/* Features styles */
+.features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+}
+.features h2 {
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.elements p {
+    text-align: center;
+    word-wrap: break-word;
+    margin-top: 10px;
+}
+.elements div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.elements{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.devices, .productivity, .pay{
+    margin: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Wise thoughts and a lonely button */
+.wise-thoughts {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.quote {
+    padding: 50px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;   
+    background-color: rgb(252,239,235);
+}
+.quote div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    word-wrap: break-word;
+}
+.picture img {
+    height: 100%;
+}
+.quote p {
+    font-size: 28px;
+}
+.quote span {
+    font-size: 36px;
+    color: rgb(244,128,34);
+}
+.quote button {
+    width: 150px;
+    height: 40px;
+    background-color: rgb(244,128,34);
+    border: 0;
+    border-radius: 3px;
+    color: white;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+.quote button:hover {
+    background-color: rgb(173, 82, 7);
+}
+
+@media (max-width: 848px) {
+    .picture img {
+        width: 100vw;
+    }
+}
