@@ -50,7 +50,7 @@ send_data_button.addEventListener("click", () => {
 
     let data = {username: username, password: password}
     tg.sendData(JSON.stringify(data));
-    tg.close();
+    // tg.close();
 });
 
 exit_button.addEventListener("click", () => {
