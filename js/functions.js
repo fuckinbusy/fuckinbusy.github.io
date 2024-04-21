@@ -21,7 +21,7 @@ function clear_error() {
 }
 
 tg.ready();
-tg.showAlert('Добро пожаловать, ' + tg.initDataUnsafe.user.first_name);
+tg.showAlert('Добро пожаловать');
 
 send_data_button.addEventListener("click", () => {
     /* Click listener for send_data_button */
