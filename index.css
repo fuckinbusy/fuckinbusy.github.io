@@ -3,6 +3,13 @@
     padding: 0;
 }
 
+img {
+    width: 10px;
+    height: 10px;
+    max-width: 75px;
+    max-height: 75px;
+}
+
 .main {
     /* background-color: black; */
     background-color: var(--tg-theme-bg-color);
