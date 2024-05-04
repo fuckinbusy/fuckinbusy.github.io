@@ -32,7 +32,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: var(--tg-theme-secondary-bg-color);
     border-radius: 10px;
 }
 .order div {
