@@ -25,8 +25,8 @@ img {
     margin: 10px 10px 10px 10px;
     padding: 10px;
     display: flex;
-    width: 200px;
-    max-height: 250px;
+    max-width: 200px;
+    height: auto;
     /* border: 2px solid black; */
     text-wrap: wrap;
     flex-direction: column;
@@ -44,6 +44,10 @@ img {
     align-items: center;
     margin-bottom: 10px;
 }
+.image img{
+    width: 100%;
+    height: auto;
+}
 .text h4, p {
     text-align: left;
     margin-bottom: 10px;
@@ -53,10 +57,10 @@ img {
     height: 30px;
 }
 input[type="button"] {
-    background-color: green;
+    background-color: var(--tg-theme-button-color);
     border-radius: 10px;
     border: 0;
-    color: white;
+    color: var(--tg-theme-button-text-color);
     transition: all 0.3s;
 }
 .btn:hover {
